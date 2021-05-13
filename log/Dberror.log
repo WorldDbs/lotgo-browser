@@ -1,0 +1,63 @@
+2021/04/23 14:47:39 main.go/app/v1/index/model/BlockModel.Api_insert  sql: converting argument $4 type: unsupported type []struct { Miner string "json:\"Miner\""; Ticket struct { VRFProof string "json:\"VRFProof\"" } "json:\"Ticket\""; ElectionProof struct { WinCount int "json:\"WinCount\""; VRFProof string "json:\"VRFProof\"" } "json:\"ElectionProof\""; BeaconEntries interface {} "json:\"BeaconEntries\""; WinPoStProof []struct { PoStProof int "json:\"PoStProof\""; ProofBytes string "json:\"ProofBytes\"" } "json:\"WinPoStProof\""; Parents []struct { NAMING_FAILED string "json:\"/\"" } "json:\"Parents\""; ParentWeight string "json:\"ParentWeight\""; Height int "json:\"Height\""; ParentStateRoot struct { NAMING_FAILED string "json:\"/\"" } "json:\"ParentStateRoot\""; ParentMessageReceipts struct { NAMING_FAILED string "json:\"/\"" } "json:\"ParentMessageReceipts\""; Messages struct { NAMING_FAILED string "json:\"/\"" } "json:\"Messages\""; BLSAggregate struct { Type int "json:\"Type\""; Data string "json:\"Data\"" } "json:\"BLSAggregate\""; Timestamp int "json:\"Timestamp\""; BlockSig struct { Type int "json:\"Type\""; Data string "json:\"Data\"" } "json:\"BlockSig\""; ForkSignaling int "json:\"ForkSignaling\""; ParentBaseFee string "json:\"ParentBaseFee\"" }, a slice of struct
+2021/05/11 21:18:54 main.go/app/v1/index/model/HeightModel.Api_find_last  invalid connection
+2021/05/11 21:19:29 main.go/app/v1/index/model/MinerModel.Api_find  invalid connection
+2021/05/11 21:19:29 main.go/app/v1/index/model/SystemParamModel.Api_update  invalid connection
+2021/05/12 16:29:01 main.go/app/v1/index/model/SystemParamModel.Api_update  invalid connection
+2021/05/12 16:29:01 main.go/app/v1/index/model/HeightModel.Api_find_last  invalid connection
+2021/05/12 16:29:07 main.go/app/v1/index/model/MinerModel.Api_find  invalid connection
+2021/05/12 17:40:11 main.go/app/v1/index/model/HeightModel.Api_find_last  invalid connection
+2021/05/12 17:55:16 main.go/app/v1/index/model/HeightModel.Api_find_last  invalid connection
+2021/05/12 17:55:21 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/12 17:55:26 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/12 17:55:31 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/12 17:55:36 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/12 17:55:41 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/12 17:55:46 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/12 18:10:22 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/12 18:10:27 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/12 18:25:27 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/12 18:25:32 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/12 18:40:32 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/12 18:40:37 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/12 18:55:37 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/12 18:55:42 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/12 19:10:43 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/12 19:10:48 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/12 19:25:49 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/12 19:25:54 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/13 10:46:39 main.go/app/v1/index/model/HeightModel.Api_find  invalid connection
+2021/05/13 10:46:39 main.go/app/v1/index/model/HeightModel.(*Interface).Api_insert  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/13 10:46:39 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/13 10:46:42 main.go/app/v1/index/model/SystemParamModel.Api_update  invalid connection
+2021/05/13 10:46:42 main.go/app/v1/index/model/GasModel.Api_insert  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/13 10:46:42 main.go/app/v1/index/model/MinerModel.Api_find  invalid connection
+2021/05/13 10:46:42 main.go/app/v1/index/model/MinerModel.Api_insert  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/13 10:46:44 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/13 13:18:35 main.go/app/v1/index/model/MessageModel.(*Interface).Api_insert  Error 1146: Table 'lotus_browser.messages' doesn't exist
+2021/05/13 13:18:37 main.go/app/v1/index/model/MessageModel.(*Interface).Api_insert  Error 1146: Table 'lotus_browser.messages' doesn't exist
+2021/05/13 13:18:40 main.go/app/v1/index/model/MessageModel.(*Interface).Api_insert  Error 1146: Table 'lotus_browser.messages' doesn't exist
+2021/05/13 13:18:43 main.go/app/v1/index/model/MessageModel.(*Interface).Api_insert  Error 1146: Table 'lotus_browser.messages' doesn't exist
+2021/05/13 13:19:20 main.go/app/v1/index/model/MessageModel.(*Interface).Api_insert  Error 1054: Unknown column 'numn_secpk' in 'field list'
+2021/05/13 13:19:21 main.go/app/v1/index/model/MessageModel.(*Interface).Api_insert  Error 1054: Unknown column 'numn_secpk' in 'field list'
+2021/05/13 13:19:21 main.go/app/v1/index/model/MessageModel.(*Interface).Api_insert  Error 1054: Unknown column 'numn_secpk' in 'field list'
+2021/05/13 13:19:22 main.go/app/v1/index/model/MessageModel.(*Interface).Api_insert  Error 1054: Unknown column 'numn_secpk' in 'field list'
+2021/05/13 13:19:22 main.go/app/v1/index/model/MessageModel.(*Interface).Api_insert  Error 1054: Unknown column 'numn_secpk' in 'field list'
+2021/05/13 13:19:23 main.go/app/v1/index/model/MessageModel.(*Interface).Api_insert  Error 1054: Unknown column 'numn_secpk' in 'field list'
+2021/05/13 13:20:41 main.go/app/v1/index/model/MessageBlsModel.(*Interface).Api_insert  sql: converting argument $13 type: unsupported type struct { NAMING_FAILED string "json:\"/\"" }, a struct
+2021/05/13 13:23:13 main.go/app/v1/index/model/MessageBlsModel.(*Interface).Api_insert  sql: converting argument $5 type: unsupported type struct { NAMING_FAILED string "json:\"/\"" }, a struct
+2021/05/13 15:24:09 main.go/app/v1/index/model/HeightModel.Api_find_last  invalid connection
+2021/05/13 15:24:36 main.go/app/v1/index/model/HeightModel.Api_find_last  invalid connection
+2021/05/13 15:24:41 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/13 15:30:11 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/13 15:30:16 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/13 15:46:16 main.go/app/v1/index/model/MinerModel.Api_find  invalid connection
+2021/05/13 15:46:26 main.go/app/v1/index/model/BlocksModel.(*Interface).Api_insert  invalid connection
+2021/05/13 15:46:43 main.go/app/v1/index/model/SystemParamModel.Api_update  invalid connection
+2021/05/13 15:46:51 main.go/app/v1/index/model/MinerModel.Api_insert  invalid connection
+2021/05/13 15:52:28 main.go/app/v1/index/model/HeightModel.Api_find_last  invalid connection
+2021/05/13 15:52:33 main.go/app/v1/index/model/MinerModel.Api_find  invalid connection
+2021/05/13 15:52:33 main.go/app/v1/index/model/SystemParamModel.Api_update  invalid connection
+2021/05/13 15:53:05 main.go/app/v1/index/model/MessageSecpkModel.Api_select  Error 1146: Table 'lotus_browser.message_speck' doesn't exist
+2021/05/13 16:07:41 main.go/app/v1/index/model/HeightModel.Api_find_last  invalid connection
+2021/05/13 16:07:46 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/13 16:07:51 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
