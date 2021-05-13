@@ -12,11 +12,12 @@ type Interface struct {
 	Db gorose.IOrm
 }
 
-func (self *Interface) Api_insert(belong_cid, height, message_cid, Version, From, To, Nonce, Value, GasLimit, GasFeeCap, GasPremium, Method, Params interface{}) bool {
+func (self *Interface) Api_insert(belong_cid, height, miner, message_cid, Version, From, To, Nonce, Value, GasLimit, GasFeeCap, GasPremium, Method, Params interface{}) bool {
 	db := self.Db.Table(table)
 	data := map[string]interface{}{
 		"belong_cid":  belong_cid,
 		"height":      height,
+		"miner":       miner,
 		"message_cid": message_cid,
 		"Version":     Version,
 		"From":        From,
@@ -45,6 +46,20 @@ func Api_select(belong_cid interface{}, page, limit int) []gorose.Data {
 		"belong_cid": belong_cid,
 	}
 	db.Where(where)
+	db.Order("id desc")
+	db.Limit(limit)
+	db.Page(page)
+	ret, err := db.Get()
+	if err != nil {
+		Log.Dbrr(err, tuuz.FUNCTION_ALL())
+		return nil
+	} else {
+		return ret
+	}
+}
+
+func Api_select_all(page, limit int) []gorose.Data {
+	db := tuuz.Db().Table(table)
 	db.Order("id desc")
 	db.Limit(limit)
 	db.Page(page)

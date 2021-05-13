@@ -61,3 +61,7 @@
 2021/05/13 16:07:41 main.go/app/v1/index/model/HeightModel.Api_find_last  invalid connection
 2021/05/13 16:07:46 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
 2021/05/13 16:07:51 main.go/app/v1/index/model/HeightModel.Api_find_last  dial tcp: lookup b.aerofsx.com: no such host
+2021/05/13 16:21:13 main.go/app/v1/index/model/SystemParamModel.Api_update  invalid connection
+2021/05/13 16:21:13 main.go/app/v1/index/model/MinerModel.Api_find  invalid connection
+2021/05/13 16:21:14 main.go/app/v1/index/model/GasModel.Api_insert  invalid connection
+2021/05/13 16:21:14 main.go/app/v1/index/model/HeightModel.Api_find  invalid connection
