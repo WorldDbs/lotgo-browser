@@ -77,7 +77,7 @@ func Get_block_by_height(height_att int64) {
 					if !b.Api_insert(cid.NAMING_FAILED, height.Result.Height, block.Timestamp, block.Miner, parents, block.ParentWeight, block.Messages.NAMING_FAILED, Messages, datas) {
 						fmt.Println(datas)
 					}
-					err = ChainGetBlockMessages(cid.NAMING_FAILED, height_att)
+					err = ChainGetBlockMessages(cid.NAMING_FAILED, height_att, block.Miner)
 					if err != nil {
 						Log.Crrs(err, tuuz.FUNCTION_ALL())
 						return

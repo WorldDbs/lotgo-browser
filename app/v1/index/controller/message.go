@@ -3,7 +3,6 @@ package controller
 import (
 	"github.com/gin-gonic/gin"
 	"main.go/app/v1/index/model/MessageBlsModel"
-	"main.go/app/v1/index/model/MessageModel"
 	"main.go/app/v1/index/model/MessageSecpkModel"
 	"main.go/tuuz/Input"
 	"main.go/tuuz/RET"
@@ -24,7 +23,7 @@ func message_list(c *gin.Context) {
 	if !ok {
 		return
 	}
-	datas := MessageModel.Api_select(limit, page)
+	datas := MessageBlsModel.Api_select_all(limit, page)
 	RET.Success(c, 0, datas, nil)
 }
 
