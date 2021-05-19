@@ -20,6 +20,17 @@ func OnRoute(router *gin.Engine) {
 		{
 			v1.IndexRouter(index)
 		}
-
+		wallet := version1.Group("wallet")
+		{
+			v1.WalletRouter(wallet)
+		}
+		miner := version1.Group("miner")
+		{
+			v1.MinerRouter(miner)
+		}
+		gas := version1.Group("gas")
+		{
+			v1.GasRouter(gas)
+		}
 	}
 }

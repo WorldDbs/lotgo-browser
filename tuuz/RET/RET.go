@@ -16,27 +16,27 @@ func Success(c *gin.Context, code int, data, echo interface{}) {
 		switch code {
 
 		case 0:
-			echo = "成功"
+			echo = "Success"
 			break
 
 		case 400:
-			echo = "参数错误"
+			echo = "Param Error"
 			break
 
 		case 403:
-			echo = "权限不足"
+			echo = "Auth Denided"
 			break
 
 		case 404:
-			echo = "未找到数据"
+			echo = "Resource Not Found"
 			break
 
 		case 500:
-			echo = "数据库错误"
+			echo = "Database Error"
 			break
 
 		default:
-			echo = "失败"
+			echo = "Fail"
 			break
 		}
 	}

@@ -10,4 +10,4 @@ const AppMode = "release"
 
 const WebsocketKey = "123"
 
-const Address = "http://106.12.204.147:9003/rpc/v0"
+const Address = "http://47.241.191.19:1234/rpc/v0"

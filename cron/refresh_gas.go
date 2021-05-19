@@ -11,6 +11,7 @@ func Refresh_gas() {
 		select {
 		case <-tick.C:
 			Filecoin.GasEstimateGasPremium()
+			Filecoin.StateMinerInitialPledgeCollateral()
 		}
 	}
 }

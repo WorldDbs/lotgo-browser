@@ -14,7 +14,7 @@ import (
 	"main.go/tuuz/Net"
 )
 
-func ChainGetBlockMessages(cid interface{}, height int64, miner interface{}) error {
+func ChainGetBlockMessages(cid interface{}, height int64, miner interface{}, date int) error {
 	var jr jsonrpc
 	jr.Jsonrpc = "2.0"
 	jr.Method = "Filecoin.ChainGetBlockMessages"
@@ -23,7 +23,7 @@ func ChainGetBlockMessages(cid interface{}, height int64, miner interface{}) err
 		"/": cid,
 	}}
 
-	ret, err := Net.PostRaw(app_conf.Address, jr)
+	ret, err := Net.PostRaw(app_conf.Address, nil, jr)
 	//fmt.Println(ret, err)
 	if err != nil {
 		fmt.Println(err)
@@ -49,10 +49,7 @@ func ChainGetBlockMessages(cid interface{}, height int64, miner interface{}) err
 			m.Api_insert(cid, height, data, len(sta.Result.BlsMessages), len(sta.Result.SecpkMessages), len(sta.Result.Cids))
 			for _, message := range sta.Result.BlsMessages {
 				mbls.Api_insert(cid, height, miner, message.CID.NAMING_FAILED, message.Version, message.From, message.To, message.Nonce,
-					message.Value, message.GasLimit,
-					message.GasFeeCap, message.GasPremium,
-					message.Method,
-					message.Params)
+					message.Value, message.GasLimit, message.GasFeeCap, message.GasPremium, message.Method, message.Params, date)
 			}
 			for _, secp := range sta.Result.SecpkMessages {
 				message := secp.Message
@@ -62,8 +59,7 @@ func ChainGetBlockMessages(cid interface{}, height int64, miner interface{}) err
 					return err
 				}
 				mkls.Api_insert(cid, height, message.CID.NAMING_FAILED, message.Version, message.From, message.To, message.Nonce, message.Value, message.GasLimit, message.GasFeeCap, message.GasPremium,
-					message.Method,
-					message.Params, signature, secp.CID.NAMING_FAILED)
+					message.Method, message.Params, signature, secp.CID.NAMING_FAILED, date)
 			}
 			db.Commit()
 		}

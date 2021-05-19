@@ -2,6 +2,7 @@ package BaseController
 
 import (
 	"github.com/gin-gonic/gin"
+	"main.go/app/v1/wallet/model/WalletUserModel"
 	"main.go/common/BaseModel/TokenModel"
 	"main.go/config/app_conf"
 	"main.go/tuuz/Input"
@@ -13,12 +14,10 @@ func LoginedController() gin.HandlerFunc {
 		c.Header("S-P-I", c.ClientIP())
 		c.Header("S-P-P", app_conf.Project)
 		//c.Header("S-P-M", app_conf.AppMode)
-		uid, ok := Input.Post("uid", c, false)
+		token, ok := Input.Post("token", c, false)
 		if !ok {
-			c.Abort()
 			return
 		}
-		token, ok := Input.Post("token", c, false)
 		if !ok {
 			c.Abort()
 			return
@@ -30,7 +29,8 @@ func LoginedController() gin.HandlerFunc {
 				return
 			}
 		}
-		if len(TokenModel.Api_find(uid, token)) > 0 {
+
+		if len(WalletUserModel.Api_find_byToken(token)) > 0 {
 			c.Next()
 			return
 		} else {

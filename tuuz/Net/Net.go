@@ -47,15 +47,19 @@ func Rpc(url string, postData interface{}, username, password string) (string, e
 	}
 }
 
-func PostRaw(url string, postData interface{}) (string, error) {
+func PostRaw(url string, queries map[string]interface{}, postData interface{}) (string, error) {
 	req := Request()
 	header := map[string]string{"Content-type": "application/json"}
 	req.SetHeaders(header)
 	req.SetTimeout(5 * time.Second)
 	req.DisableKeepAlives(true)
+	q := ""
+	if queries != nil {
+		q = "?" + Http_build_query(queries)
+	}
 	req.SetTLSClient(&tls.Config{InsecureSkipVerify: true})
 	req.Transport(transport)
-	ret, err := req.Post(url, postData)
+	ret, err := req.Post(url+q, postData)
 	body, err := ret.Content()
 	if err != nil {
 		return "", err
