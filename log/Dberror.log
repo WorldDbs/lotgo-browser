@@ -65,3 +65,19 @@
 2021/05/13 16:21:13 main.go/app/v1/index/model/MinerModel.Api_find  invalid connection
 2021/05/13 16:21:14 main.go/app/v1/index/model/GasModel.Api_insert  invalid connection
 2021/05/13 16:21:14 main.go/app/v1/index/model/HeightModel.Api_find  invalid connection
+2021/05/13 23:40:42 main.go/app/v1/wallet/model/WalletUserModel.Api_insert  Error 1364: Field 'id' doesn't have a default value
+2021/05/13 23:41:07 main.go/app/v1/wallet/model/WalletUserModel.Api_insert  Error 1364: Field 'id' doesn't have a default value
+2021/05/13 23:42:32 main.go/app/v1/wallet/model/WalletUserModel.Api_insert  Error 1364: Field 'id' doesn't have a default value
+2021/05/13 23:46:22 main.go/app/v1/wallet/model/WalletUserModel.Api_insert  Error 1364: Field 'id' doesn't have a default value
+2021/05/14 00:14:36 main.go/app/v1/index/model/MessageBlsModel.Api_select_to  Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-20' at line 1
+2021/05/14 00:15:05 main.go/app/v1/index/model/MessageBlsModel.Api_select_to  Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-20' at line 1
+2021/05/14 00:15:46 main.go/app/v1/index/model/MessageBlsModel.Api_select_to  Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-20' at line 1
+2021/05/14 00:15:52 main.go/app/v1/index/model/MessageBlsModel.Api_select_to  Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-20' at line 1
+2021/05/14 00:16:12 main.go/app/v1/index/model/MessageBlsModel.Api_select_to  Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-20' at line 1
+2021/05/14 00:16:17 main.go/app/v1/index/model/MessageBlsModel.Api_select_to  Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-20' at line 1
+2021/05/14 00:16:41 main.go/app/v1/index/model/MessageBlsModel.Api_select_to  Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-20' at line 1
+2021/05/14 00:17:02 main.go/app/v1/index/model/MessageBlsModel.Api_select_to  Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-20' at line 1
+2021/05/14 00:17:33 main.go/app/v1/index/model/MessageBlsModel.Api_select_to  Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-200' at line 1
+2021/05/14 00:17:57 main.go/app/v1/index/model/MessageBlsModel.Api_select_to  Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-200' at line 1
+2021/05/14 00:17:59 main.go/app/v1/index/model/MessageBlsModel.Api_select_to  Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-20' at line 1
+2021/05/15 14:53:08 main.go/app/v1/index/model/PlegModel.Api_insert  Error 1366: Incorrect double value: '' for column `lotus_browser`.`pleg`.`num` at row 1

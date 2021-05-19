@@ -25,7 +25,7 @@ func StateListMiners() {
 	jr.ID = 1
 	jr.Params = []interface{}{nil}
 
-	ret, err := Net.PostRaw(app_conf.Address, jr)
+	ret, err := Net.PostRaw(app_conf.Address, nil, jr)
 	//fmt.Println(ret, err)
 	if err != nil {
 		fmt.Println(err)

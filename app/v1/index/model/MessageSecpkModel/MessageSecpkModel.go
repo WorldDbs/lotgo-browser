@@ -12,7 +12,7 @@ type Interface struct {
 	Db gorose.IOrm
 }
 
-func (self *Interface) Api_insert(belong_cid, height, message_cid, Version, From, To, Nonce, Value, GasLimit, GasFeeCap, GasPremium, Method, Params, Signature, CID interface{}) bool {
+func (self *Interface) Api_insert(belong_cid, height, message_cid, Version, From, To, Nonce, Value, GasLimit, GasFeeCap, GasPremium, Method, Params, Signature, CID, date interface{}) bool {
 	db := self.Db.Table(table)
 	data := map[string]interface{}{
 		"belong_cid":  belong_cid,
@@ -30,6 +30,7 @@ func (self *Interface) Api_insert(belong_cid, height, message_cid, Version, From
 		"Params":      Params,
 		"Signature":   Signature,
 		"CID":         CID,
+		"date":        date,
 	}
 	db.Data(data)
 	_, err := db.Insert()

@@ -29,7 +29,7 @@ func Get_block_by_height(height_att int64) {
 	jr.ID = 1
 	jr.Params = []interface{}{height_att, nil}
 
-	ret, err := Net.PostRaw(app_conf.Address, jr)
+	ret, err := Net.PostRaw(app_conf.Address, nil, jr)
 	//fmt.Println(ret, err)
 	if err != nil {
 		fmt.Println(err)
@@ -77,7 +77,7 @@ func Get_block_by_height(height_att int64) {
 					if !b.Api_insert(cid.NAMING_FAILED, height.Result.Height, block.Timestamp, block.Miner, parents, block.ParentWeight, block.Messages.NAMING_FAILED, Messages, datas) {
 						fmt.Println(datas)
 					}
-					err = ChainGetBlockMessages(cid.NAMING_FAILED, height_att, block.Miner)
+					err = ChainGetBlockMessages(cid.NAMING_FAILED, height_att, block.Miner, block.Timestamp)
 					if err != nil {
 						Log.Crrs(err, tuuz.FUNCTION_ALL())
 						return

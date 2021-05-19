@@ -3,6 +3,7 @@ package controller
 import (
 	"github.com/gin-gonic/gin"
 	"main.go/app/v1/index/model/BlocksModel"
+	"main.go/app/v1/index/model/MessageBlsModel"
 	"main.go/tuuz/Input"
 	"main.go/tuuz/RET"
 )
@@ -22,6 +23,16 @@ func height_get(c *gin.Context) {
 	if !ok {
 		return
 	}
-	data := BlocksModel.Api_select_byHeight(height)
-	RET.Success(c, 0, data, nil)
+	timestamp := int64(0)
+	datas := BlocksModel.Api_select_byHeight(height)
+	for i, data := range datas {
+		timestamp = data["timestamp"].(int64)
+		data["message_count"] = MessageBlsModel.Api_count_byBelongCid(data["cid"])
+		data["reward"] = MessageBlsModel.Api_sum_value(data["cid"])
+		if data["reward"] == nil {
+			data["reward"] = 0
+		}
+		datas[i] = data
+	}
+	RET.Success(c, 0, datas, timestamp)
 }

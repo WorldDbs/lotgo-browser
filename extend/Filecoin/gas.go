@@ -4,7 +4,7 @@ import (
 	"fmt"
 	jsoniter "github.com/json-iterator/go"
 	"main.go/app/v1/index/model/GasModel"
-	"main.go/app/v1/index/model/SystemParamModel"
+	"main.go/common/BaseModel/SystemParamModel"
 	"main.go/config/app_conf"
 	"main.go/tuuz/Net"
 	"time"
@@ -23,7 +23,7 @@ func GasEstimateGasPremium() {
 	jr.ID = 1
 	jr.Params = []interface{}{42, nil, 9, nil}
 
-	ret, err := Net.PostRaw(app_conf.Address, jr)
+	ret, err := Net.PostRaw(app_conf.Address, nil, jr)
 	//fmt.Println(ret, err)
 	if err != nil {
 		fmt.Println(err)

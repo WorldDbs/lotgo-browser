@@ -60,3 +60,29 @@ func Api_select(page, limit int) []gorose.Data {
 		return ret
 	}
 }
+
+func Api_find_height(height interface{}) gorose.Data {
+	db := tuuz.Db().Table(table)
+	where := map[string]interface{}{
+		"height": height,
+	}
+	db.Where(where)
+	ret, err := db.First()
+	if err != nil {
+		Log.Dbrr(err, tuuz.FUNCTION_ALL())
+		return nil
+	} else {
+		return ret
+	}
+}
+
+func Api_count_24() interface{} {
+	db := tuuz.Db().Table(table)
+	ret, err := db.Query("SELECT SUM(num_cid) as num FROM `message` order by id desc LIMIT 17280")
+	if err != nil {
+		Log.Dbrr(err, tuuz.FUNCTION_ALL())
+		return 0
+	} else {
+		return ret[0]["num"]
+	}
+}

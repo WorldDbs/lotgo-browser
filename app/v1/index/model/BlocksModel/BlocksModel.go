@@ -3,6 +3,7 @@ package BlocksModel
 import (
 	"github.com/gohouse/gorose/v2"
 	"main.go/tuuz"
+	"main.go/tuuz/Date"
 	"main.go/tuuz/Log"
 )
 
@@ -102,6 +103,18 @@ func Api_count() int64 {
 	}
 }
 
+func Api_count_byMiner(miner interface{}) int64 {
+	db := tuuz.Db().Table(table)
+	db.Where("miner", miner)
+	ret, err := db.Count()
+	if err != nil {
+		Log.Dbrr(err, tuuz.FUNCTION_ALL())
+		return 0
+	} else {
+		return ret
+	}
+}
+
 func Api_find_byCid(cid interface{}) gorose.Data {
 	db := tuuz.Db().Table(table)
 	where := map[string]interface{}{
@@ -112,6 +125,18 @@ func Api_find_byCid(cid interface{}) gorose.Data {
 	if err != nil {
 		Log.Dbrr(err, tuuz.FUNCTION_ALL())
 		return nil
+	} else {
+		return ret
+	}
+}
+
+func Api_count_24() int64 {
+	db := tuuz.Db().Table(table)
+	db.Where("timestamp", ">", Date.Today_int())
+	ret, err := db.Count()
+	if err != nil {
+		Log.Dbrr(err, tuuz.FUNCTION_ALL())
+		return 0
 	} else {
 		return ret
 	}
